@@ -1,0 +1,29 @@
+{
+	"name": "openscreen-mcp-server",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Model Context Protocol server that lets an AI agent drive the OpenScreen desktop app (recording, editing, export) through its automation bridge.",
+	"type": "module",
+	"bin": {
+		"openscreen-mcp": "dist/index.js"
+	},
+	"main": "dist/index.js",
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"watch": "tsc -p tsconfig.json --watch",
+		"start": "node dist/index.js",
+		"dev": "tsc -p tsconfig.json && node dist/index.js",
+		"typecheck": "tsc -p tsconfig.json --noEmit"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.12.0",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.0",
+		"typescript": "^5.9.3"
+	}
+}
